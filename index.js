@@ -4,7 +4,7 @@ const { createEventAdapter } = require('@slack/events-api');
 const axios = require('axios')
 const fs = require('fs')
 
-const port = process.env.SLACK_PORT || 3001;
+const port = process.env.SLACK_PORT || 80;
 
 const slackEvents = createEventAdapter(process.env.SLACK_SIGNING_SECRET);
 const slackClient = new WebClient(process.env.SLACK_OAUTH_TOKEN);
