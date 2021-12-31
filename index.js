@@ -140,4 +140,4 @@ async function cronjob() {
 
 setInterval(async () => {
   await cronjob();
-}, 1000 * 5); // 10 minutes
+}, 1000 * 60 * 5); // 10 minutes
