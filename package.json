@@ -1,0 +1,21 @@
+{
+  "name": "code_competition_slackbot",
+  "version": "1.0.0",
+  "description": "Slackbot that tells about code competition",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/events-api": "^3.0.1",
+    "@slack/web-api": "^6.5.1",
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
