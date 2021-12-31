@@ -1,13 +1,13 @@
 const { WebClient } = require('@slack/web-api');
-const { SLACK_OAUTH_TOKEN, SLACK_SIGNING_SECRET } = require ('./constants')
+// const { SLACK_OAUTH_TOKEN, SLACK_SIGNING_SECRET } = require ('./constants')
 const { createEventAdapter } = require('@slack/events-api');
 const axios = require('axios')
 const fs = require('fs')
 
 const port = process.env.SLACK_PORT || 3001;
 
-const slackEvents = createEventAdapter(SLACK_SIGNING_SECRET);
-const slackClient = new WebClient(SLACK_OAUTH_TOKEN);
+const slackEvents = createEventAdapter(process.env.SLACK_SIGNING_SECRET);
+const slackClient = new WebClient(process.env.SLACK_OAUTH_TOKEN);
 
 slackEvents.on('app_mention', (event) => {
   console.log(`Got message from user ${event.user}: ${event.text}`);
